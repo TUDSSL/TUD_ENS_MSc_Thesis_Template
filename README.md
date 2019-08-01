@@ -22,4 +22,4 @@ Based on the old ES Group Template provided, which was again adapted from the ol
 
 Copyright (C) 2019 TU Delft Embedded and Networked Systems Group.
 
-Unlicensed.
+See License.md file
