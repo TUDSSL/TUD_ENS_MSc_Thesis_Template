@@ -1,6 +1,6 @@
 # TU Delft ENS Group MSc Thesis Template
 
-This is a official repository for TU Delft Embedded Networked Systems Group MSc Thesis Template.
+This is a official repository for [TU Delft Embedded Networked Systems Group](http://www.ens.ewi.tudelft.nl) MSc Thesis Template.
 
 ### History
 
@@ -14,17 +14,15 @@ Assuming you have LaTeX installed and any Unix-compatible system, simply type
 make
 ```
 
-This will compile the whole thesis (mege front pages with the core of the thesis and generate `thesis.pdf`). Makefile, which is part of this repository specifies the following options:
+This will compile the whole thesis (mege front pages with the core of the thesis and generate `thesis.pdf`). Makefile, which is part of this repository, specifies the following options in particular:
 
-- `make`: compiles the whole thesis
-- `all`:
-- `dvipdf`: dvipdf
-- `pdflatex`:
-- `spell`:
-- `dvi`:
-- `view`:
-- `clean`:
-- ``:
+- `all`: calls this makefile `pdflatex` command
+- `dvipdf`: calls this makefile `dvi` command and complies pdf file from dvi file
+- `pdflatex`: complies `thesis.tex` with unix/linux `pdflatex` command
+- `dvi`: complies `thesis.tex` with unix/linux `latex` command
+- `spell`: run `aspell` command (linux spell checking command) over all `.tex` files
+- `view`: calls this makefile `pdflatex` command and then GNOME Evince Document Viewer
+- `clean`: removes all ancillary files from the `work` directory
 
 ### Structure of this folder
 
