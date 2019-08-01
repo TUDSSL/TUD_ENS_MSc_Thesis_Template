@@ -1,4 +1,4 @@
-# TU Delft ENS Group MSc ThesisTemplate
+# TU Delft ENS Group MSc Thesis Template
 
 TU Delft Embedded Networked Systems Group MSc Thesis Template.
 
