@@ -2,10 +2,6 @@
 
 This is a official repository for [TU Delft Embedded Networked Systems Group](http://www.ens.ewi.tudelft.nl) MSc Thesis Template.
 
-### History
-
-This template is an adapted LaTeX thesis template of the old TU Delft Embedded Systems Group (see example [here](https://repository.tudelft.nl/islandora/object/uuid%3A6d5a3afd-1966-4357-b063-7a82c0fdb0ab)). That template was again adapted from the MSc thesi template of the [Parallel (and then Distributed) Systems group](https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/software-technology/distributed-systems/) at TU Delft.
-
 ### How to use this template
 
 Assuming you have LaTeX installed and any Unix-compatible system, simply type
@@ -39,6 +35,10 @@ _Files_:
 - `thesis.tex`: main `.tex` file
 - `thesis.pdf`: compiled version of `thesis.tex`
 - `Makefile`: makefile to compile `thesis.tex`
+
+### History
+
+This template is an adapted LaTeX thesis template of the old TU Delft Embedded Systems Group (see example [here](https://repository.tudelft.nl/islandora/object/uuid%3A6d5a3afd-1966-4357-b063-7a82c0fdb0ab)). That template was again adapted from the MSc thesi template of the [Parallel (and then Distributed) Systems group](https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/software-technology/distributed-systems/) at TU Delft.
 
 ### Copyright
 
