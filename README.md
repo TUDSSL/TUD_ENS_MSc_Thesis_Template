@@ -14,7 +14,7 @@ Based on the old ES Group Template provided, which was again adapted from the ol
 - `chapters`: folder with chapter `*.tex` files
 - `template`: folder with this template `*.tex` template files
 - `template-pics`: folder with this template `*.tex` images for front page
-- `work`: folder for storing all `.out` files (folder must exist, otherwise `make` will crash)
+- `work`: folder for storing all `.aux`, `.log`, `.out` and `.toc` files (folder must exist, otherwise `make` will crash)
 - `Makefile`: makefile
 - `thesis.tex`: main `.tex` file
 
