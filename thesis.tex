@@ -1,0 +1,179 @@
+% MSc thesis style for TU Delft Embedded Networked Systems Group.
+
+% MIT License
+%
+% Copyright (c) 2019 TU Delft Embedded and Networked Systems Group and Casper Dennis van Wezel.
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\documentclass[10pt,twoside,a4paper,openright]{report}
+
+% add new packages here
+
+% math packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% textblocks for title page
+\usepackage[absolute]{textpos}
+
+% use babel for proper hyphenation
+\usepackage[british]{babel}
+
+% Graphics: different for pdflatex or dvi output, choose one
+%%\usepackage[dvips]{graphicx}
+%%\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
+
+\usepackage{epstopdf}
+\usepackage{rotating}
+\usepackage{subfigure}
+
+% Make captions distinguishable
+\usepackage[textfont=bf]{caption}
+
+% Chose font style
+\usepackage[scaled=.92]{helvet}
+
+% for url's use "\url{http://www.google.com/}"
+\usepackage{url}
+\usepackage[plainpages=false]{hyperref} 
+
+% Information that will be filled in at various points in the report
+\newcommand{\reportTitle}{WRITE YOUR THESIS TITLE HERE}
+\newcommand{\reportAuthor}{WRITE YOUR NAME AND SURNAME HERE} % Please put your full and official name here: no abbreviations (and to Dutch students: geen roepnamen)
+\newcommand{\studentNumber}{WRITE YOUR TU DELFT STUDENT NUMBER HERE}
+\newcommand{\reportEmailTUD}{REPORT-YOUR-TU-DELFT-EMAIL-FROM-STUDENT-TUDELFT-NL@student.tudelft.nl}
+\newcommand{\reportEmailNonTUD}{REPORT-YOUR-NON-TU-DELFT-EMAIL@some.other.non.tudelft.nl.domain.com}
+\newcommand{\reportUrlEmailTUD}{\href{mailto:\reportEmailTUD}{\reportEmailTUD}}
+\newcommand{\reportUrlEmailNonTUD}{\href{mailto:\reportEmailNonTUD}{\reportEmailNonTUD}}
+\newcommand{\reportMSC}{PUT TU DELFT PROGRAM THAT YOU FOLLOWED HERE} % Examples are {Embedded Systems} {Computer Engineering} {Computer Science} or {Electrical Engineering}
+\newcommand{\reportDate}{PUT DATE OF PROVIDING THESIS TO GRADUATION COMMITTEE HERE}
+\newcommand{\presentationDate}{PUT DATE OF YOUR PRESENTATION HERE}
+\newcommand{\graduationCommittee}{
+PUT THE NAME AND SURNAME OF GRADUATION COMMITTEE MEMBER 1 HERE & Delft University of Technology \\
+PUT THE NAME AND SURNAME OF GRADUATION COMMITTEE MEMBER 2 HERE & Delft University of Technology \\
+% ...
+PUT THE NAME AND SURNAME OF GRADUATION COMMITTEE MEMBER X HERE & Delft University of Technology \\
+}
+
+% Provide full name and surname (no abbreviations), so "Koen Langendoen" not "K. Langendoen"
+
+% The order of listing above: 
+
+% title + Graduation committee chairman name and surname (chairman)
+% title + Supervisor 1 name and surname (direct supervisor)
+% title + Supervisor 2 name and surname (direct supervisor)
+% ...
+% title + Supervisor X name and surname (direct supervisor) 
+% ...
+% Others (ordered by title and alphabetical)
+
+% Example: 
+% prof.\,dr.\,ir.\,Koen Langendoen (chairman) & Delft University of Technology \\ 
+% dr.\,Przemys{\l}aw Pawe{\l}czak & Delft University of Technology \\ 
+
+\newcommand{\reportAbstract}{WRITE YOUR ABSTRACT HERE}
+
+\newcommand{\reportKeywords}{LIST YOUR KEYWORDS HERE}
+
+% Information for pdflatex
+\pdfinfo{
+/Author (\reportAuthor)
+/Title (\reportTitle)
+/Keywords (\reportKeywords)
+}
+
+\begin{document}
+
+\pagenumbering{alph}
+\pagestyle{empty}
+
+% Make frontcover
+\include{frontcover}
+
+% Set marginns
+\hoffset=1.63cm
+\oddsidemargin=0in
+\evensidemargin=0in
+\textwidth=5in
+
+%
+\parindent=1em
+
+% Empty page
+\cleardoublepage
+
+\pagestyle{plain}
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+% Create title page: page i (hidden)
+\include{titlepage}
+
+% Create Graduation Data and Abstract: pages ii and iii (hidden)
+\include{graduationdata}
+
+% Empty page: page iv
+\cleardoublepage
+
+% (Optional) Include quotation: page v (uncomment if needed)
+\include{quotation}
+
+% Empty page: page vi
+\cleardoublepage
+
+% Create preface: page v
+\include{preface}
+
+% Empty page: page vi
+\cleardoublepage
+
+% Create tabe of contents: page vii
+\tableofcontents
+
+\cleardoublepage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% Create Introduction: page 1
+\include{introduction}
+
+% Create chapters
+\include{chapter_1}
+%\include{chapter_2}
+% ...
+%\include{chapter_X}
+
+% Create conclusions
+\include{conclusions}
+
+% Create future work
+\include{futurework}
+
+% Create bibliography
+\bibliographystyle{plain} % Please do not change the style of bibliography (yes, it should be `plain`)
+\bibliography{../bib/MyMScTUDENSThesisBibFile}
+
+% Create appendix
+\appendix
+\include{appendix_a}
+
+\end{document}

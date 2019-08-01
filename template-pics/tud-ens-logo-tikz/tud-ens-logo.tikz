@@ -1,0 +1,120 @@
+% TU Delft Embedded Networked Systems Group Logo: stand-alone latex source (part b: .tikz file).
+
+% Go to https://github.com/TUDSSL/TUD_ENS_Logo for the latest version of the logo
+
+% MIT License
+%
+% Copyright (c) 2019 TU Delft Embedded and Networked Systems Group and Casper Dennis van Wezel.
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+%% Default colors
+\definecolor{TUcyan}{RGB}{0,166,214}
+
+\colorlet{mycolorborder}{black}
+\colorlet{mycolorchip}{black}
+\colorlet{mycolortext}{black}
+
+% Define color setting if not already defined
+\providecommand{\logowificolor}{3}
+
+\ifcase\logowificolor
+% case: 0 : black
+    \colorlet{mycolorwifi1}{black}
+    \colorlet{mycolorwifi2}{black}
+    \colorlet{mycolorwifi3}{black}
+\or
+% case: 1
+    \colorlet{mycolorwifi1}{TUcyan}
+    \colorlet{mycolorwifi2}{black}
+    \colorlet{mycolorwifi3}{black}
+\or
+% case: 2
+    \colorlet{mycolorwifi1}{TUcyan}
+    \colorlet{mycolorwifi2}{TUcyan}
+    \colorlet{mycolorwifi3}{black}
+\or
+% case: 3
+    \colorlet{mycolorwifi1}{TUcyan}
+    \colorlet{mycolorwifi2}{TUcyan}
+    \colorlet{mycolorwifi3}{TUcyan}
+\else
+% default black
+    \colorlet{mycolorwifi1}{TUcyan}
+    \colorlet{mycolorwifi2}{TUcyan}
+    \colorlet{mycolorwifi3}{TUcyan}
+\fi
+
+
+\def\c{0.4} % 1/2 chip width & height
+\def\o{1.25} % 1/2 outer width & height
+\def\l{0.5*\c} % chip leg length
+\def\lw{0.2} % white space between chip & legs
+\def\lo{0.1} % offset between legs and edge of chip
+\def\g{0.4} % gap between wifis
+\def\go{0.2} % gap between wifi and outer border
+
+\begin{tikzpicture}[
+    chip/.style={fill=mycolorchip},
+    legs/.style={draw, line cap=round,line width=1.25mm,mycolorchip},
+    outside/.style={draw, line width=2mm,rounded corners=0.5cm,mycolorborder},
+    wifi1/.style={draw, line width=2mm,mycolorwifi1},
+    wifi2/.style={draw, line width=2mm,mycolorwifi2},
+    wifi3/.style={draw, line width=2mm,mycolorwifi3},
+    % name_label/.style={align=left,font=\sffamily\selectfont \bfseries \Huge,text width=5cm,text=mycolortext},
+    name_label/.style={align=left,font=\fontfamily{phv}\selectfont \bfseries \Huge,text width=5cm,text=mycolortext},
+    ]
+
+    \ifdefined\notextlogo
+        % do not draw text
+    \else
+        % draw text
+        \node[name_label] (e) at (4.3,1) {Embedded};
+        \node[name_label] (n) at (4.3,0) {Networked};
+        \node[name_label] (s) at (4.3,-1) {Systems};
+    \fi
+
+    \fill[chip, rounded corners] (-\c,-\c) rectangle (\c,\c);
+    \draw[outside] (-\c+\go,\o) -| (\o,-\o) -| (-\o,\c-\go);
+
+    % Legs Left
+    % \path[legs] (-\c-\lw, +\c-\lo) -- (-\c-\lw-\l,+\c-\lo);
+    \path[legs] (-\c-\lw, 0) -- (-\c-\lw-\l,0);
+    \path[legs] (-\c-\lw, -\c+\lo) -- (-\c-\lw-\l,-\c+\lo);
+
+    % Legs Right
+    \path[legs] (\c+\lw, +\c-\lo) -- (\c+\lw+\l,+\c-\lo);
+    \path[legs] (\c+\lw, 0) -- (\c+\lw+\l,0);
+    \path[legs] (\c+\lw, -\c+\lo) -- (\c+\lw+\l,-\c+\lo);
+
+    % Legs Bottom
+    \path[legs] (+\c-\lo,-\c-\lw) -- (+\c-\lo,-\c-\lw-\l);
+    \path[legs] (0,-\c-\lw) -- (0,-\c-\lw-\l);
+    \path[legs] (-\c+\lo,-\c-\lw) -- (-\c+\lo,-\c-\lw-\l);
+
+    % Legs Top
+    \path[legs] (+\c-\lo,\c+\lw) -- (+\c-\lo,\c+\lw+\l);
+    \path[legs] (0,\c+\lw) -- (0,\c+\lw+\l);
+    % \path[legs] (-\c+\+0.5lo,\c+\lw) -- (-\c+\lo,\c+\lw+\l);
+
+    \draw[wifi1] (-\c,\o-\g) arc (90:180:\o-\c-\g);
+    \draw[wifi2] (-\c,\o) arc (90:180:\o-\c);
+    \draw[wifi3] (-\c,\o+\g) arc (90:180:\o-\c+\g);
+
+\end{tikzpicture}

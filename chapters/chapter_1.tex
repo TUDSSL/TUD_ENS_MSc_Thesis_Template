@@ -1,0 +1,52 @@
+\chapter{CHAPTER TITLE}
+\label{chp:chapter_1}
+
+This chapter describes the ... In Section~\ref{sec:SECTIONTITLE}, examples are given om how to use tables and figures in this MSc thesis.
+
+\section{SECTION TITLE}
+\label{sec:SECTIONTITLE}
+
+
+Define models with math, such that
+%
+\begin{equation}
+x = a^2 + b^2,
+\label{eq:EQUATION}
+\end{equation}
+%
+where $a$ and $b$ are your parameters, define your system.
+
+Remarks on style:
+
+\begin{enumerate}
+	\item use `Section` name to refer to sections when citing (so Section~\ref{sec:SECTIONTITLE} not Sec.~\ref{sec:SECTIONTITLE} or Subsection~\ref{sec:SECTIONTITLE}); Same comment applies to Tables, Algorithms and Figures
+	\item Tables and figures must be at the top of the page---use [t] marker (not [h], for `here`); 
+	\item Every caption should end with a period;
+	\item Encapsulate equations in `()` brackets and do not add word `equation before` (therefore `in~(\ref{eq:EQUATION})`, not `in Equation~\ref{eq:EQUATION}` or in Eq.~\ref{eq:EQUATION});
+	\item Equations are sentences, so punctuation applies at the end of it (comma, semicolon or full-stop).
+\end{enumerate}
+
+Here is a simple table
+
+\begin{table}[t]
+\centering
+\begin{tabular}{| l | c | r |}
+\hline
+left aligned & centred & right aligned \\
+\hline \hline
+12 & 34 & 56 \\
+\hline
+\end{tabular}
+\caption{Complete sentence describing the tabular data. Caption should summarize the conclusions of the result.}
+\label{tab:table_1}
+\end{table}
+
+Here is a simple figure.
+
+\begin{figure}[t]
+\includegraphics[width=\textwidth]{template-pics/tud-ens-logo-tikz/tud-ens-logo}
+\caption{Complete sentence describing the figure thoroughly. Caption should summarize the conclusions of the result.}
+\label{fig:example-figure}
+\end{figure}
+
+Citations are here~\cite{polastre2004analysis,powercast_website,hester2016persistent,schaper_msc_thesis_2017,dementyev_uist_2016}. See `bib/MyMScTUDENSThesisBibFile.bib` file for a list of requirements when typesetting a bibliography.
