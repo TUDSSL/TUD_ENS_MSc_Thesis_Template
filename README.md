@@ -6,9 +6,25 @@ This is a official repository for TU Delft Embedded Networked Systems Group MSc 
 
 This template is an adapted LaTeX thesis template of the old TU Delft Embedded Systems Group (see example [here](https://repository.tudelft.nl/islandora/object/uuid%3A6d5a3afd-1966-4357-b063-7a82c0fdb0ab)). That template was again adapted from the MSc thesi template of the [Parallel (and then Distributed) Systems group](https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/software-technology/distributed-systems/) at TU Delft.
 
-### Use
+### How to use this template
+
+Assuming you have LaTeX installed and any Unix-compatible system, simply type
+
+```
+make
+```
+
+This will compile the whole thesis (mege front pages with the core of the thesis and generate `thesis.pdf`). Makefile, which is part of this repository specifies the following options:
 
 - `make`: compiles the whole thesis
+- `all`:
+- `dvipdf`: dvipdf
+- `pdflatex`:
+- `spell`:
+- `dvi`:
+- `view`:
+- `clean`:
+- ``:
 
 ### Structure of this folder
 
@@ -30,4 +46,4 @@ _Files_:
 
 Copyright (C) 2019 TU Delft Embedded and Networked Systems Group.
 
-MIT Licence. See [License.md](License.md) file for details.
+MIT Licence. See [License](https://github.com/TUDSSL/TUD_ENS_MSc_Thesis_Template/blob/master/LICENSE) file for details.
