@@ -1,4 +1,4 @@
-TARGET=thesis #specify name of refence file holding thesis
+TARGET=thesis#specify name of refence file holding thesis
 TEXFILES=$(wildcard *.tex)
 LATEXOPTIONS= --output-directory=./work --shell-escape
 LATEXPATH=.:./template:./chapters:${TEXINPUTS}
