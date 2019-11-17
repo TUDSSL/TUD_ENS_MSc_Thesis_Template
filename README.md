@@ -28,7 +28,7 @@ _Folders_:
 - `chapters`: folder with core chapter `*.tex` files
 - `template`: folder with this template `*.tex` template files
 - `template-pics`: folder with this template `*.tex` images for front page (including [TU Delft ENS Logo](https://github.com/TUDSSL/TUD_ENS_Logo))
-- `work`: folder for storing all `.aux`, `.log`, `.out` and `.toc` files (folder must exist, otherwise `make` will crash)
+- `build`: folder for storing all `.aux`, `.log`, `.out` and `.toc` files
 
 _Files_:
 
