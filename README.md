@@ -33,7 +33,6 @@ _Folders_:
 _Files_:
 
 - `thesis.tex`: main `.tex` file
-- `thesis.pdf`: compiled version of `thesis.tex`
 - `Makefile`: makefile to compile `thesis.tex`
 
 ### History
