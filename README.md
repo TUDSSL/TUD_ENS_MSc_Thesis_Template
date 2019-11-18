@@ -17,7 +17,7 @@ This will compile the whole thesis (mege front pages with the core of the thesis
 - `pdflatex`: complies `thesis.tex` with unix/linux `pdflatex` command
 - `dvi`: complies `thesis.tex` with unix/linux `latex` command
 - `spell`: run `aspell` command (linux spell checking command) over all `.tex` files
-- `view`: calls this makefile `pdflatex` command and then GNOME Evince Document Viewer
+- `view`: calls this makefile `pdflatex` command and then [GNOME Evince Document Viewer](https://help.gnome.org/users/evince/stable/)
 - `clean`: removes all ancillary files from the `work` directory
 
 ### Structure of this folder
