@@ -112,7 +112,7 @@ PUT THE NAME AND SURNAME OF GRADUATION COMMITTEE MEMBER X HERE & Delft Universit
 \pagestyle{empty}
 
 % Make frontcover
-\include{frontcover}
+\include{template/frontcover}
 
 % Set marginns
 \hoffset=1.63cm
@@ -131,22 +131,22 @@ PUT THE NAME AND SURNAME OF GRADUATION COMMITTEE MEMBER X HERE & Delft Universit
 \setcounter{page}{1}
 
 % Create title page: page i (hidden)
-\include{titlepage}
+\include{template/titlepage}
 
 % Create Graduation Data and Abstract: pages ii and iii (hidden)
-\include{graduationdata}
+\include{template/graduationdata}
 
 % Empty page: page iv
 \cleardoublepage
 
 % (Optional) Include quotation: page v (uncomment if needed)
-\include{quotation}
+\include{chapters/quotation}
 
 % Empty page: page vi
 \cleardoublepage
 
 % Create preface: page v
-\include{preface}
+\include{chapters/preface}
 
 % Empty page: page vi
 \cleardoublepage
@@ -160,19 +160,19 @@ PUT THE NAME AND SURNAME OF GRADUATION COMMITTEE MEMBER X HERE & Delft Universit
 \setcounter{page}{1}
 
 % Create Introduction: page 1
-\include{introduction}
+\include{chapters/introduction}
 
 % Create chapters
-\include{chapter_1}
+\include{chapters/chapter_1}
 %\include{chapter_2}
 % ...
 %\include{chapter_X}
 
 % Create conclusions
-\include{conclusions}
+\include{chapters/conclusions}
 
 % Create future work
-\include{futurework}
+\include{chapters/futurework}
 
 % Create bibliography
 \bibliographystyle{plain} % Please do not change the style of bibliography (yes, it should be `plain`)
@@ -180,6 +180,6 @@ PUT THE NAME AND SURNAME OF GRADUATION COMMITTEE MEMBER X HERE & Delft Universit
 
 % Create appendix
 \appendix
-\include{appendix_a}
+\include{chapters/appendix_a}
 
 \end{document}
