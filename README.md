@@ -20,6 +20,10 @@ This will compile the whole thesis (mege front pages with the core of the thesis
 - `view`: calls this makefile `pdflatex` command and then [GNOME Evince Document Viewer](https://help.gnome.org/users/evince/stable/)
 - `clean`: removes all ancillary files from the `work` directory
 
+### Using this template with Overleaf
+
+To use this template with overleaf fork this repository and import it to overleaf. If you face issues with rendering the ENS logo, compile the tud-ens-logo.tex file and place the generated image (.pdf) in the required location (template-pics/tud-ens-logo-tikz). Make sure you start editing with the thesis.tex file with your name, thesis title etc. 
+
 ### Structure of this folder
 
 _Folders_:
