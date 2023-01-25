@@ -2,7 +2,7 @@
 
 % MIT License
 %
-% Copyright (c) 2019 TU Delft Embedded and Networked Systems Group and Casper Dennis van Wezel.
+% Copyright (c) 2023 TU Delft Embedded Systems Group and Casper Dennis van Wezel.
 %
 % Permission is hereby granted, free of charge, to any person obtaining a copy
 % of this software and associated documentation files (the "Software"), to deal
@@ -112,7 +112,7 @@ PUT THE NAME AND SURNAME OF GRADUATION COMMITTEE MEMBER X HERE & Delft Universit
 \pagestyle{empty}
 
 % Make frontcover
-\include{template/frontcover}
+\input{template/frontcover}
 
 % Set marginns
 \hoffset=1.63cm
@@ -131,22 +131,22 @@ PUT THE NAME AND SURNAME OF GRADUATION COMMITTEE MEMBER X HERE & Delft Universit
 \setcounter{page}{1}
 
 % Create title page: page i (hidden)
-\include{template/titlepage}
+\input{template/titlepage}
 
 % Create Graduation Data and Abstract: pages ii and iii (hidden)
-\include{template/graduationdata}
+\input{template/graduationdata}
 
 % Empty page: page iv
 \cleardoublepage
 
 % (Optional) Include quotation: page v (uncomment if needed)
-\include{chapters/quotation}
+\input{chapters/quotation}
 
 % Empty page: page vi
 \cleardoublepage
 
 % Create preface: page v
-\include{chapters/preface}
+\input{chapters/preface}
 
 % Empty page: page vi
 \cleardoublepage
@@ -160,26 +160,26 @@ PUT THE NAME AND SURNAME OF GRADUATION COMMITTEE MEMBER X HERE & Delft Universit
 \setcounter{page}{1}
 
 % Create Introduction: page 1
-\include{chapters/introduction}
+\include{introduction}
 
 % Create chapters
-\include{chapters/chapter_1}
-%\include{chapter_2}
+\input{chapters/chapter_1}
+%\input{chapters/chapter_2}
 % ...
-%\include{chapter_X}
+%\nput{chapters/chapter_X}
 
 % Create conclusions
-\include{chapters/conclusions}
+\input{chapters/conclusions}
 
 % Create future work
-\include{chapters/futurework}
+\input{chapters/futurework}
 
 % Create bibliography
 \bibliographystyle{plain} % Please do not change the style of bibliography (yes, it should be `plain`)
-\bibliography{bib/MyMScTUDENSThesisBibFile}
+\bibliography{../bib/MyMScTUDESThesisBibFile}
 
 % Create appendix
 \appendix
-\include{chapters/appendix_a}
+\input{chapters/appendix_a}
 
 \end{document}
